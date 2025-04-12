@@ -46,6 +46,18 @@ h5 {
     font-weight: 400;
     letter-spacing: -0.02rem;
 }
+
+h6 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: -0.02rem;
+}
+
+h7 {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.02rem;
+}
 p {
     font-size: 1.25rem;
     line-height: 1.6em;
@@ -131,7 +143,20 @@ nav ul a{
 .hero_section main h1 span{
     color: #FF8800;
 }
+/* ===== My Focus ===== */
+.focus_section{
+    display:flex;
+    align-items: center;
+    justify-content: start;
+    width:100%;
+    gap: 5rem;
+    text-decoration: none;
+    position: relative;
+    padding: 1.5rem 0;
+    border-top: 1px dashed #cecece;
+    border-bottom: 1px dashed #cecece;
 
+}
 /* ===== PROJECTS ===== */
 
 .projects_section main{
@@ -184,47 +209,116 @@ nav ul a{
     object-fit: cover;
 }
 
-
 /* ===== FOOTER ===== */
+
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 5rem 0;
+    background-color: white;
+    color: black; 
+    padding: 4rem 0;
+    text-align: center;
 }
 
-.footer-content{
-    display:flex;
-    flex-direction: row;
+footer main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     align-items: center;
     justify-content: center;
+    width: 90%;
     margin: 0 auto;
 }
 
-footer img {
-    justify-content: end;
-}
-.footer-links {
+/* Footer Top Section */
+footer .footer-top {
     display: flex;
-    gap: 24px;
-    margin: 24px 0;
-    justify-content: flex-end;
-    align-items:center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.footer-links a {
+footer .footer-top p {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: black;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+footer .footer-top h3 {
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+}
+
+footer .footer-top h3 span {
+    font-style: italic;
+    font-weight: 400;
+    color: black; /* Highlight color */
+}
+
+footer .footer-top .footer-email {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: black;
     text-decoration: none;
-    color: #121212;
+    border: 2px solid black;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
 }
 
-.footer-links a:hover {
-    color: #cecece;
+footer .footer-top .footer-email:hover {
+    background-color: #FF8800;
+    color: black;
 }
 
-/* ===== RESPONSIVE ADJUSTMENTS ===== */
-/*@media (max-width: 768px) {
+/* Footer Bottom Section */
+footer .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    border-top: 1px dashed black;
+    padding-top: 2rem;
+    width: 100%;
+}
+
+footer .footer-location-time {
+    display: flex;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color:black;
+}
+
+footer .footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+footer .footer-links a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+/* ===== PROJECTS ===== */
+
+.projects_section_archive main{
+    gap: 5rem;
+}
+.projects_list_archive{
+    width: 100%;
+    list-style: none;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== 
+@media (max-width: 320px) {
     body {
         padding: 30px;
     }
@@ -250,7 +344,7 @@ footer img {
     .divider {
         margin: 40px 0;
     }
-}/*
+}
 
 figure 
 {
@@ -258,4 +352,4 @@ figure
     float: left;
     margin-top: auto;
     margin-bottom: auto;
-}
+}/*
