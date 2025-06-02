@@ -10,7 +10,8 @@ html {
 
 body {
     font-family: 'Manrope', sans-serif;
-    color: #121212;   
+    color: #121212;
+    cursor: none;
 }
 
 /* ===== ESTILO ===== */
@@ -83,6 +84,16 @@ main {
 
 /* ===== NAVBAR ===== */
 
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    text-decoration: none;
+    color: black;
+}
+
 nav{
     display: flex;
     flex-direction: column;
@@ -114,8 +125,10 @@ nav ul{
 }
 
 nav ul a{
-    color: #121212;
+    color: black;
     text-decoration: none;
+    font-weight: 200;
+    font-size: 1rem;
 }
 
 /* ===== HERO ===== */
@@ -141,7 +154,7 @@ nav ul a{
 }
 
 .hero_section main h1 span{
-    color: #FF8800;
+    color: black;
 }
 /* ===== My Focus ===== */
 .focus_section{
@@ -157,6 +170,11 @@ nav ul a{
     border-bottom: 1px dashed #cecece;
 
 }
+
+.focus_section{
+    margin-top: 5rem;
+}
+
 /* ===== PROJECTS ===== */
 
 .projects_section main{
@@ -178,6 +196,7 @@ nav ul a{
     border-top: 1px dashed #cecece;
     position: relative;
     transition: all 0.5s ease;
+    cursor: none;
 }
 
 .projects_list li a:hover{
@@ -208,6 +227,7 @@ nav ul a{
     height: 100%;
     object-fit: cover;
 }
+
 
 /* ===== FOOTER ===== */
 
@@ -272,8 +292,8 @@ footer .footer-top .footer-email {
 }
 
 footer .footer-top .footer-email:hover {
-    background-color: #FF8800;
-    color: black;
+    background-color: black;
+    color: white;
 }
 
 /* Footer Bottom Section */
@@ -307,7 +327,16 @@ footer .footer-links a {
     text-decoration: none;
     transition: color 0.3s ease;
 }
-/* ===== PROJECTS ===== */
+/* ===== ARCHIVE PAGE ===== */
+
+.archive_sub {
+    padding: 6rem 0 4rem 0; /* mais espaço em cima e em baixo */
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    background-color: white; /* ou o fundo que quiseres */
+}
+
 
 .projects_section_archive main{
     gap: 5rem;
@@ -317,39 +346,61 @@ footer .footer-links a {
     list-style: none;
 }
 
-/* ===== RESPONSIVE ADJUSTMENTS ===== 
-@media (max-width: 320px) {
-    body {
-        padding: 30px;
-    }
-    
-    nav {
-        flex-direction: column;
-        gap: 20px;
-        margin-bottom: 40px;
-    }
-    
-    .nav-links {
-        gap: 20px;
-    }
-    
-    h1 {
-        font-size: 36px;
-    }
-    
-    h2 {
-        font-size: 24px;
-    }
-    
-    .divider {
-        margin: 40px 0;
-    }
+/* ===== ABOUT PAGE ===== */
+
+.about_section main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1.5rem;
+    row-gap: 5rem;
+    width: 90%;
+    margin: 8rem auto 5rem auto;
 }
 
-figure 
-{
-    width: 45%;
-    float: left;
-    margin-top: auto;
-    margin-bottom: auto;
-}/*
+.about_section h3 {
+    grid-column: span 2;
+}
+
+.about_section > main > p:first-of-type {
+    grid-column: 4 / 16;
+    line-height: 1.6em;
+}
+
+.about-details {
+    grid-column: 4 / 16;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.about_section h2 {
+    grid-column: 4 / 16;
+    letter-spacing: 0.02em;
+}
+
+.about_section img {
+    grid-column: 4 / 16;
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+}
+
+.about_section > main > p:last-of-type {
+    grid-column: 4 / 16;
+    line-height: 1.5em;
+}
+
+.about-details a {
+    text-decoration: none;
+    color: #121212;
+}
+
+.about_section h4 {
+    grid-column: 4 / 16;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+
+
