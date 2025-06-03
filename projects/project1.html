@@ -1,34 +1,85 @@
-<!-- projects/project1.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1 - Guilherme Nelas</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Spiritbox Concept</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <!-- Same header as other pages -->
-    </header>
+    <nav>
+        <main>
+            <a href="index.html" class="logo">Guilherme Nelas</a>
+        <ul>
+            <li><a href="archive.html">Archive</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </main>
+    </nav>
 
-    <main class="project-detail">
-        <h1>Project 1 Title</h1>
-        <img src="../images/Pinguim_na_Neve.jpg" alt="Full project image">
-        <div class="project-description">
-            <h2>About this project</h2>
-            <p>Detailed description of the project...</p>
-            <h3>Technologies used</h3>
-            <ul>
-                <li>Technology 1</li>
-                <li>Technology 2</li>
+    <section class="projects_section">
+        <main>
+            <h2>Selected Projects</h2>
+            <ul class="projects_list">
+                <li>
+                    <a href="#">
+                        <div>
+                            <h4>Punto Pago</h4>
+                            <p>The first Super App in Latin America.</p>
+                        </div>
+                        <div class="img_container">
+                            <img src="images/punto-pago-mockup.png" alt="Punto Pago Project Image">
+                        </div>
+                    </a>
+                </li>
+                <!-- Adicione mais projetos aqui -->
             </ul>
-            <a href="../archive.html" class="back-link">← Back to all work</a>
-        </div>
-    </main>
-
-    <footer>
-        <!-- Same footer as other pages -->
-    </footer>
+        </main>
+    </section>
+<footer class="animated-footer">
+        <main>
+            <div class="footer-top">
+                <p>HAVE A PROJECT IN MIND?</p>
+                <h3>LET'S CONNECT & CREATE <br><span>SOMETHING POWERFUL.</span></h3>
+                <a href="mailto:Guiribeiro149@gmail.com" class="footer-email">Guiribeiro149@gmail.com</a>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-location-time">
+                    <span>Portugal</span>
+                    <span id="current-time">00:00:00 GMT-5</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://linkedin.com/in/guilhermenelas" target="_blank">LINKEDIN</a>
+                    <a href="https://www.behance.net/guilhermegaspar6" target="_blank">BEHANCE</a>
+                </div>
+            </div>
+        </main>
+</footer>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="footer-clock.js"></script>
+<script src="Sketch.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+      
+        gsap.from("footer.animated-footer main", {
+      y: 50,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: "footer.animated-footer",
+        start: "top bottom", // começa quando o topo do footer entra no viewport
+        toggleActions: "play none none none"
+      }
+    });
+      </script>
+      
 </body>
 </html>
+    
