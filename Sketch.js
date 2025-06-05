@@ -1,52 +1,41 @@
-let x = 0;
-let y = 0;
-let isHovering = false;
+let cursor_delay_element, cursor_element;
+let current_x, current_y;
+let target_x, target_y;
+
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  let canvas = document.querySelector('canvas');
-  canvas.style.position = 'fixed';
-  canvas.style.top = '0';
-  canvas.style.left = '0';
-  canvas.style.pointerEvents = 'none';
-  canvas.style.zIndex = '1000';
+    noCanvas(); // Não precisamos de um canvas p5.js visual, só manipulamos o DOM
+
+    cursor_delay_element = select("#meu_cursor_delay");
+    cursor_element = select("#meu_cursor");
+
+    cursor_delay_element.show(); // Mostra o div do cursor com delay
+    cursor_element.show(); // Mostra o div do cursor principal
+
+    current_x = mouseX;
+    current_y = mouseY;
 }
+
 
 function draw() {
-  clear(); // transparente
-  x = lerp(x, mouseX, 0.15);
-  y = lerp(y, mouseY, 0.15);
+    const w_delay = 60; // Tamanho do cursor com delay
+    const h_delay = 60;
+    cursor_delay_element.size(w_delay, h_delay);
+    cursor_delay_element.style("border-radius", w_delay / 2 + "px"); // O CSS já faz isso, mas aqui reforça
 
-  noStroke();
-  if (isHovering) {
-    fill(0);
-    ellipse(x, y, 100);
+    target_x = mouseX;
+    target_y = mouseY;
 
-    fill(255);
-    textAlign(CENTER, CENTER);
-    textSize(14);
-    text("View Project", x, y);
-  } else {
-    fill(0, 100);
-    ellipse(x, y, 20);
-  }
+    const lerpAmount = 0.15; // Menos delay (mais rápido)
+    current_x = lerp(current_x, target_x, lerpAmount);
+    current_y = lerp(current_y, target_y, lerpAmount);
+
+    cursor_delay_element.position(current_x - w_delay / 2, current_y - h_delay / 2, "fixed");
+
+
+    const w = 15; // Tamanho do cursor principal
+    const h = 15;
+    cursor_element.size(w, h);
+    cursor_element.style("border-radius", w / 2 + "px"); // O CSS já faz isso, mas aqui reforça
+    cursor_element.position(target_x - w / 2, target_y - h / 2, "fixed");
 }
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
-
-// Hover detection fora do p5
-document.addEventListener('DOMContentLoaded', () => {
-  const links = document.querySelectorAll('.project-link');
-  links.forEach(link => {
-    link.addEventListener('mouseenter', () => {
-      isHovering = true;
-    });
-    link.addEventListener('mouseleave', () => {
-      isHovering = false;
-    });
-  });
-}); 
-
-
