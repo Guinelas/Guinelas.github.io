@@ -494,9 +494,9 @@ footer .footer-links a {
     justify-self: start;
     font-size: 1rem;
     font-weight: 600;
-    color: #ffffff;
-    background-color: #121212;
-    padding: 1.56rem 2rem;
+    color: black;
+    background-color: transparent;
+    padding: o.5rem 0;
     border-radius: 1.5rem;
     text-decoration: none;
     margin-top: 2rem;
