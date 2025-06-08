@@ -1,16 +1,25 @@
+// Guilherme Nelas nº3220534
+// Exercicio de Avaliação: Portfolio
+// 3º ano 2024/2025
+// Semestre 2º
+// Laboratório de Projeto II
+// Design Gráfico e Multimedia
+// Escola superior de Artes e Design Caldas Da Rainha (ESAD.CR)
+// 08/06/2025
+
 let cursor_delay_element, cursor_element;
 let current_x, current_y;
 let target_x, target_y;
 
 
 function setup() {
-    noCanvas(); // Não precisamos de um canvas p5.js visual, só manipulamos o DOM
+    noCanvas(); // Não preciso do canvas 
 
     cursor_delay_element = select("#meu_cursor_delay");
     cursor_element = select("#meu_cursor");
 
-    cursor_delay_element.show(); // Mostra o div do cursor com delay
-    cursor_element.show(); // Mostra o div do cursor principal
+    cursor_delay_element.show(); // Mostra a div do cursor com delay
+    cursor_element.show(); // Mostra a div do cursor principal
 
     current_x = mouseX;
     current_y = mouseY;
@@ -18,8 +27,8 @@ function setup() {
 
 
 function draw() {
-    const w_delay = 60; // Tamanho do cursor com delay
-    const h_delay = 60;
+    const w_delay = 60; // width do cursor com delay
+    const h_delay = 60; // height do mesmo
     cursor_delay_element.size(w_delay, h_delay);
     cursor_delay_element.style("border-radius", w_delay / 2 + "px"); // O CSS já faz isso, mas aqui reforça
 

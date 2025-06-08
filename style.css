@@ -1,3 +1,12 @@
+/*<!--Guilherme Nelas nº3220534
+Exercicio de Avaliação: Portfolio
+3º ano 2024/2025
+Semestre 2º
+Laboratório de Projeto II
+Design Gráfico e Multimedia
+Escola superior de Artes e Design Caldas Da Rainha (ESAD.CR)
+08/06/2025-->*/
+
 * {
     margin: 0;
     padding: 0;
@@ -102,9 +111,9 @@ main {
     width: 90%;
 }
 
-/* ===== HOMEPAGE ===== */
+/*  HOMEPAGE  */
 
-/* ===== NAVBAR ===== */
+/*  NAVBAR  */
 
 .logo {
     display: flex;
@@ -153,7 +162,7 @@ nav ul a{
     font-size: 1.05rem;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 
 .hero_section{
     height: 100vh;
@@ -179,7 +188,7 @@ nav ul a{
 .hero_section main h1 span{
     color: black;
 }
-/* ===== My Focus ===== */
+/*  My Focus */
 .focus_section{
     display:flex;
     align-items: center;
@@ -198,7 +207,7 @@ nav ul a{
     margin-top: 5rem;
 }
 
-/* ===== Archive/Projects ===== */
+/*  Archive/Projects */
 
 .projects_section main{
     gap: 5rem;
@@ -253,7 +262,7 @@ nav ul a{
 
 
 
-/* ===== Pagina individual dos projetos ===*/
+/* Pagina individual dos projetos*/
 .project_hero {
     background-color: white;
     padding-top: 8rem; 
@@ -519,6 +528,7 @@ footer .footer-links a {
     transform: translateY(0);
 }
 
+/* tablet*/
 @media (min-width: 768px) and (max-width: 1024px) {
     /* Geral */
     main {
@@ -730,36 +740,36 @@ footer .footer-links a {
         margin: 4rem auto;
         width: 90%;
         padding: 6rem 0 1rem 0;
-      }
+    }
     
-      .about_section h3,
-      .about_section > main > p:first-of-type,
-      .about_section h2,
-      .about_section img,
-      .about_section > main > p:last-of-type,
-      .about_section h4, {
+    .about_section h3,
+    .about_section > main > p:first-of-type,
+    .about_section h2,
+    .about_section img,
+    .about_section > main > p:last-of-type,
+    .about_section h4 {
         width: 100%;
-      }
+    }
     
-      .about-details {
+    .about-details {
         display: flex;
         flex-direction: row;  /* lado a lado */
         gap: 2rem;
         justify-content: flex-start;
-      }
+    }
     
-      /* Ajuste pra colunas dentro do about-details */
-      .about-details > div {
+    /* Ajuste pra colunas dentro do about-details */
+    .about-details > div {
         flex: 1;
-      }
+    }
     
-      .about-section img {
+    .about-section img {
         width: 100%;
         height: auto;
         object-fit: cover;
-      }
+    }
     
-      .download-btn {
+    .download-btn {
         align-self: flex-start;
         padding: 2rem 4rem;
         font-size: 1.25rem;
@@ -767,14 +777,13 @@ footer .footer-links a {
         border-radius: 1.5rem;
         grid-column: 2/-2;
         justify-content: start;
-      }
+    }
 }
 
-/* ========================================= */
-/* --- 2. Mobile Breakpoint (até 767px) --- */
-/* ========================================= */
+/* Mobile --- */
 @media (max-width: 767px) {
         /* Geral */
+
         main {
             width: 90%;
         }
@@ -989,36 +998,36 @@ footer .footer-links a {
             margin: 2rem auto;
             width: 90%;
             padding: 5rem 0 1rem 0;
-          }
+        }
         
-          .about_section h3,
-          .about_section > main > p:first-of-type,
-          .about_section h2,
-          .about_section img,
-          .about_section > main > p:last-of-type,
-          .about_section h4, {
+        .about_section h3,
+        .about_section > main > p:first-of-type,
+        .about_section h2,
+        .about_section img,
+        .about_section > main > p:last-of-type,
+        .about_section h4 {
             width: 100%;
-          }
+        }
         
-          .about-details {
+        .about-details {
             display: flex;
             flex-direction: row;  /* lado a lado */
             gap: 2rem;
             justify-content: flex-start;
-          }
+        }
         
           /* Ajuste pra colunas dentro do about-details */
-          .about-details > div {
+        .about-details > div {
             flex: 1;
-          }
+        }
         
-          .about-section img {
+        .about-section img {
             width: 100%;
             height: auto;
             object-fit: cover;
-          }
+        }
         
-          .download-btn {
+        .download-btn {
             display: block;
             align-self: flex-start;
             padding: 1rem 1.5rem;
@@ -1027,5 +1036,5 @@ footer .footer-links a {
             font-size: 1rem;
             text-align: center;
             border-radius: 1.5rem;
-          }
+        }
 }
