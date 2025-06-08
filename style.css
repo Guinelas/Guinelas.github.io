@@ -4,43 +4,39 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Manrope', sans-serif;
-    color: #121212;
-    cursor: none; /* Garante que o cursor padrão não tenha efeito de mistura */
+html, body {
+    font-family: 'Manrope', sans-serif; /*tipo de letra a ser usado*/
+    color: #121212; /* cor do texto*/
+    cursor: none; /* Tiro o cursor default para usar o que foi feito em P5.js*/
     background-color: white;
+    overflow: hidden; 
 }
 
-/* ===== Estilos para o cursor personalizado (Círculos) ===== */
+/* Cursor */
 #meu_cursor, #meu_cursor_delay {
-    pointer-events: none; /* Garante que o cursor não bloqueie cliques ou interações */
-    z-index: 10000; /* Garante que o cursor esteja sempre na frente */
-    mix-blend-mode: difference; /* Para inverter as cores ao passar por letras pretas em fundo claro */
+    pointer-events: none; /*  */
+    z-index: 10000; /* Garante que o cursor esteja visivel e por cima de tudo */
+    mix-blend-mode: difference; /* Por o blendmode em difference adicionar branco */
 }
 
-/* Estilo para o cursor principal (o pontinho que segue o mouse de perto) */
+/* Circulo pequeno */
 #meu_cursor {
-    width: 15px; /* Tamanho do cursor principal (ajuste se quiser) */
-    height: 15px; /* Tamanho do cursor principal */
-    background-color: white; /* Cor do cursor principal. Preto é ideal para o efeito 'difference' em fundos claros/texto escuro. */
-    z-index: 10001;
+    width: 15px; /* largura do cursor */
+    height: 15px; /* altura do cursor*/
+    background-color: white; /* Cor do cursor principal */
+    z-index: 10001; /* acima do cursor delay */
 }
 
-/* Estilo para o cursor com delay (o círculo maior que segue com suavidade) */
+/* Circulo grande */
 #meu_cursor_delay {
-    width: 60px; /* Tamanho do cursor com delay (ajuste se quiser) */
-    height: 60px; /* Tamanho do cursor com delay */
-    background-color: white; /* Cor e transparência para o cursor com delay. Ajuste a opacidade (0.2) se quiser mais ou menos transparência. */
-    z-index: 99998; /* Um pouco atrás do cursor principal */
-    border: 1px solid white; /* Borda para o círculo com delay. Pode mudar a cor ou remover se não quiser borda. */
+    width: 60px; /* largura da bola grande (ajuste se quiser) */
+    height: 60px; /* altura da bola grande */
+    background-color: white; /* Cor do background do cursor */
+    z-index: 99998; /* Atrás do cursor pequeno */
 }
 
 
-/* ===== ESTILO ===== */
+/* Estilos */
 h1 {
     font-size: 5.75rem;
     font-weight: 800;
@@ -50,7 +46,7 @@ h1 {
 
 h2 {
     font-size: 4.25rem;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: -0.02rem;
     color: #121212;
 }
@@ -81,7 +77,7 @@ h6 {
 }
 
 h7 {
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 400;
     letter-spacing: -0.02rem;
 }
@@ -169,6 +165,7 @@ nav ul a{
     gap: 2.5rem;
 }
 
+/* imagem de fundo para a hero (não implementei)*/
 .hero_section img{
     position: absolute;
     top: 0;
@@ -222,13 +219,14 @@ nav ul a{
     border-top: 1px dashed #cecece;
     position: relative;
     transition: all 0.5s ease;
-    cursor: none;
+    cursor: none; /* mantem o cursor escondido */
 }
 
 .projects_list li a:hover{
     background-color: rgba(0, 0, 0, .1);
 }
 
+/* hover de cada projeto em cada elemento da lista */
 .projects_list .img_container{
     position: absolute;
     z-index: 999;
@@ -253,7 +251,9 @@ nav ul a{
     object-fit: cover;
 }
 
-/* ===== Pagina dos trabalhos ===*/
+
+
+/* ===== Pagina individual dos projetos ===*/
 .project_hero {
     background-color: white;
     padding-top: 8rem; 
@@ -288,7 +288,7 @@ nav ul a{
     border-radius: 0.5rem;
 }
 
-/* ===== FULL IMAGE SECTION ===== */
+/* Gallery */
 
 .project_gallery {
     padding: 0;
@@ -304,14 +304,14 @@ nav ul a{
     gap: 3rem;
     list-style: none;
     padding-left: 0;
-    margin: 0; /* Espaçamento acima e abaixo */
+    margin: 0; /* Espaçamento acima e embaixo */
 }
 
 .project_full_image img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Garante que a imagem se ajuste ao container */
-    border-radius: 0.5rem; /* Bordas arredondadas para um visual moderno */
+    object-fit: cover; /* ajuste da image ao container */
+    border-radius: 0.5rem; /* Borda arredondada da img */
 }
 
 .project_full_image li {
@@ -322,11 +322,11 @@ nav ul a{
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 0.5rem; /* Bordas arredondadas para um visual moderno */
+    border-radius: 0.5rem;
 }
 
 
-/* ===== FOOTER ===== */
+/* Footer*/
 
 footer {
     background-color: white;
@@ -424,16 +424,16 @@ footer .footer-links a {
     text-decoration: none;
     transition: color 0.3s ease;
 }
- /* ===== ARCHIVE PAGE ===== */
+ /* Archive Page */
 .archive_sub {
     padding: 6rem 0 4rem 0; /* mais espaço em cima e em baixo */
     display: flex;
     justify-content: left;
     align-items: flex-start;
-    background-color: white; /* ou o fundo que quiseres */
+    background-color: white;
 }
 
-/* ===== ABOUT PAGE ===== */
+/* About Page */
 
 .about_section main {
     display: grid;

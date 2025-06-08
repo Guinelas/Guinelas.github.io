@@ -6,11 +6,10 @@
     <title>Spiritbox Concept</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="../p5.min.js"></script>
     <script src="../Sketch.js"></script>
-    <script src="../nav.js"></script>
+    <script src="../footer-clock.js"></script>
+    <script src="../smooth.js"></script>
 </head>
 <body>
   <div id="meu_cursor_delay"></div>
@@ -65,25 +64,5 @@
         </div>
     </main>
 </footer>
-<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-<script src="footer-clock.js"></script>
-<script src="../Sketch.js"></script>
-<script>
-    gsap.registerPlugin(ScrollTrigger);
-  
-    gsap.from("footer.animated-footer main", {
-  y: 50,
-  opacity: 0,
-  duration: 1.5,
-  ease: "power2.out",
-  scrollTrigger: {
-    trigger: "footer.animated-footer",
-    start: "top bottom", // começa quando o topo do footer entra no viewport
-    toggleActions: "play none none none"
-  }
-});
-  </script>
-  
 </body>
 </html>
