@@ -528,10 +528,16 @@ footer .footer-links a {
     transform: translateY(0);
 }
 
-/* tablet*/
 @media (hover: none), (pointer: coarse) {
     #meu_cursor, #meu_cursor_delay {
         display: none !important;
+    }
+
+    html, body {
+        cursor: auto !important;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
