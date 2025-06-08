@@ -488,25 +488,35 @@ footer .footer-links a {
     text-align: left;
 } 
 
-.download-cv {
+.download-btn {
     display: inline-block;
     grid-column: 4/16;
     justify-self: start;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 500;
     color: black;
-    background-color: transparent;
-    padding: o.5rem 0;
+    letter-spacing: 0.05rem;
+    background-color: white;
+    padding: 1rem 2.5rem;
     border-radius: 1.5rem;
     text-decoration: none;
     margin-top: 2rem;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
     position: relative;
+    cursor: pointer;
     overflow: hidden;
 }
 
-.download-cv:hover {
-    background-color: #333333;
+.download-btn:hover {
+    background-color: #23c483;
+    box-shadow: 0 12px 24px rgba(35, 196, 131, 0.4);
+    color: white;
+    transform: translateY(-4px);
+}
+
+.download-btn:active{
+    transform: translateY(0);
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -727,8 +737,7 @@ footer .footer-links a {
       .about_section h2,
       .about_section img,
       .about_section > main > p:last-of-type,
-      .about_section h4,
-      .download-cv {
+      .about_section h4, {
         width: 100%;
       }
     
@@ -750,13 +759,17 @@ footer .footer-links a {
         object-fit: cover;
       }
     
-      .download-cv {
+      .download-btn {
         align-self: flex-start;
-        padding: 1rem 1.5rem;
-        font-size: 0.95rem;
+        padding: 2rem 4rem;
+        font-size: 1.25rem;
+        font-weight: 600;
         border-radius: 1.5rem;
+        grid-column: 2/-2;
+        justify-content: start;
       }
 }
+
 /* ========================================= */
 /* --- 2. Mobile Breakpoint (até 767px) --- */
 /* ========================================= */
@@ -983,8 +996,7 @@ footer .footer-links a {
           .about_section h2,
           .about_section img,
           .about_section > main > p:last-of-type,
-          .about_section h4,
-          .download-cv {
+          .about_section h4, {
             width: 100%;
           }
         
@@ -1006,11 +1018,14 @@ footer .footer-links a {
             object-fit: cover;
           }
         
-          .download-cv {
+          .download-btn {
+            display: block;
             align-self: flex-start;
             padding: 1rem 1.5rem;
+            width: 100%;
             justify-content: center;
-            font-size: 0.95rem;
+            font-size: 1rem;
+            text-align: center;
             border-radius: 1.5rem;
           }
 }
