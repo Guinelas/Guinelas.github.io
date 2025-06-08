@@ -513,7 +513,8 @@ footer .footer-links a {
     transition: all 0.3s ease;
     position: relative;
     cursor: pointer;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y:auto;
 }
 
 .download-btn:hover {
@@ -1035,9 +1036,5 @@ footer .footer-links a {
             font-size: 1rem;
             text-align: center;
             border-radius: 1.5rem;
-        }
-
-        .meu_cursor, #meu_cursor_delay {
-        display: none;
         }
 }
