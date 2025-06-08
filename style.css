@@ -530,7 +530,7 @@ footer .footer-links a {
 
 /* tablet*/
 @media (hover: none), (pointer: coarse) {
-    #meu_cursor, #meu_cursor_delay {
+    #meu_cursor {
         display: none !important;
     }
 }
