@@ -18,7 +18,6 @@ html, body {
     color: #121212; /* cor do texto*/
     cursor: none; /* Tiro o cursor default para usar o que foi feito em P5.js*/
     background-color: white;
-    overflow: hidden; 
 }
 
 /* Cursor */
