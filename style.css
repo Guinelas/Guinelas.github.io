@@ -529,6 +529,11 @@ footer .footer-links a {
 }
 
 /* tablet*/
+@media (hover: none), (pointer: coarse) {
+    #meu_cursor, #meu_cursor_delay {
+        display: none !important;
+    }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
     /* Geral */
     main {
