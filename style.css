@@ -16,7 +16,7 @@ Escola superior de Artes e Design Caldas Da Rainha (ESAD.CR)
 html, body {
     font-family: 'Manrope', sans-serif; /*tipo de letra a ser usado*/
     color: #121212; /* cor do texto*/
-    cursor: none; /* Tiro o cursor default para usar o que foi feito em P5.js*/
+    cursor: auto; /* Tiro o cursor default para usar o que foi feito em P5.js*/
     background-color: white;
 }
 
@@ -1035,5 +1035,9 @@ footer .footer-links a {
             font-size: 1rem;
             text-align: center;
             border-radius: 1.5rem;
+        }
+
+        .meu_cursor, #meu_cursor_delay {
+        display: none;
         }
 }
